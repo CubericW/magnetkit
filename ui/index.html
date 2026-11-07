@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>MagnetKit</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div id="app">
+  <nav class="side" aria-label="导航">
+    <button class="nav" data-view="tasks"><span class="nav-ic" data-icon="download"></span><span>下载</span><span class="nav-count" id="count-tasks"></span></button>
+    <button class="nav" data-view="pending"><span class="nav-ic" data-icon="clock"></span><span>待确认</span><span class="nav-badge" id="count-jobs" hidden></span></button>
+    <button class="nav" data-view="done"><span class="nav-ic" data-icon="done"></span><span>已完成</span></button>
+    <div class="side-grow"></div>
+    <button class="nav" data-view="settings"><span class="nav-ic" data-icon="sliders"></span><span>设置</span></button>
+    <button class="nav" data-view="diag"><span class="nav-ic" data-icon="pulse"></span><span>诊断</span></button>
+    <div class="side-speed" id="speed"></div>
+  </nav>
+  <main id="main"></main>
+</div>
+<input type="file" id="file-input" accept=".torrent,application/x-bittorrent" multiple hidden>
+<div class="drop" id="drop" hidden><div>松开以添加种子文件或磁力链接</div></div>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+<script src="app.js"></script>
+</body>
+</html>
